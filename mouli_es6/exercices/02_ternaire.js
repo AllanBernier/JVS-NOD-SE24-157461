@@ -5,8 +5,6 @@
  * Contraintes:
  *    - utiliser l'opérateur ternaire (if interdit)
  */
-function ternaire() {}
-
-console.log(ternaire(1, 2));
+function ternaire(a, b ) { return a > b ? a : b }
 
 module.exports = ternaire;
