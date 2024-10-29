@@ -5,8 +5,8 @@ const productRequest = require("../middleware/ProductRequest")
 
 
 Router.get('', controller.index)
-Router.post('', productRequest,  controller.store)
-Router.put('/:id',productRequest,  controller.update)
+Router.post('', controller.store)
+Router.put('/:id', controller.update)
 Router.delete('/:id',  controller.delete)
 
 module.exports = Router
