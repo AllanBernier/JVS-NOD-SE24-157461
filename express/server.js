@@ -11,32 +11,23 @@ app.listen( port,() => {
 app.use("/product", Router)
 
 
-// app.get('/', (req, res) => {
-//   console.log("Hello world")
-//   res.send("Hello from express")
+
+// const middleware = (req, res, next) => {
+
+//   if (req.body.name != undefined) {
+//     req.isworking = true
+//     return next()
+//   }
+
+//   res.send("Stopped by middleware")
+// }
+
+
+
+// app.post("/hello-world", middleware,  (req, res) => {
+  
+//   console.log(req.isworking)
+//   res.send("Welcome !")
 // })
 
 
-// app.get('/user/:id', (req, res) => {
-//   console.log(req.params.id)
-//   res.send("Page for user id :" + req.params.id)
-// })
-
-
-// app.get('/product',(req, res) => {
-//   let product = req.query
-//   console.log(product)
-//   res.send(product)
-// })
-
-
-// app.get('/product/store', (req, res) => {
-//   res.status(201).send("Product Created")
-// })
-
-
-
-
-
-// GET POST PUT DELETE
-// CRUD
