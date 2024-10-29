@@ -1,13 +1,7 @@
-// const products = [
-//   { name: "Souris", price: 25, quantity : 125, description : "Super souris" },
-//   { name: "Souris", price: 25, quantity : 125, description : "Super souris" },
-//   { name: "Souris", price: 25, quantity : 125, description : "Super souris" },
-//   { name: "Souris", price: 25, quantity : 125, description : "Super souris" },
-// ]
-
 const Product = require("../model/product")
-
 const controller = {}
+
+
 
 controller.index = (req, res) => {
   Product.findAll()

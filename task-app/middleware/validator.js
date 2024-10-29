@@ -12,7 +12,7 @@ const isBoolean = (name, body) => {
 }
 
 const isDate = (name, body) => {
-  if ( !isNaN(new Date(body[name]))  ){
+  if ( isNaN( new Date(body[name]).getTime() ) ){
     throw new Error(`Field ${name} is not a Date`)
   }
 }

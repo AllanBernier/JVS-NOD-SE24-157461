@@ -2,7 +2,7 @@
 const {isPresent, isBoolean, isDate} = require("./validator")
 
 module.exports = (req, res, next) => {
-
+  
   try {
     isPresent("title", req.body)
     isPresent("description", req.body)
@@ -14,7 +14,6 @@ module.exports = (req, res, next) => {
 
     isDate("date_debut", req.body)
     isDate("date_fin", req.body)
-
   } catch (error) {
     return res.status(403).json({error : error.message})
   }
