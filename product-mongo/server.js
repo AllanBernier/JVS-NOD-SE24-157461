@@ -3,6 +3,7 @@ const express = require("express")
 const app = express()
 require("dotenv").config()
 const productRouter = require("./router/productRouter") 
+const taskRouter = require("./router/taskRouter") 
 
 
 
@@ -20,3 +21,4 @@ app.listen(process.env.SERVER_PORT, () => {
 
 app.use(express.json())
 app.use("/product", productRouter)
+app.use("/task", taskRouter)
