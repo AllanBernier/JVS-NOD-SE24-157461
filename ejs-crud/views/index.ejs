@@ -1,11 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Welcome in ejs file</h1>
-</body>
-</html>
+<%- include("_header") %>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>quantity</th>
+      <th>price</th>
+      <th>
+        <a href="/product/create">Create</a>
+
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% products.map( (product) => { %>
+    <tr>
+      <td><%= product.id %></td>
+      <td><%= product.name %></td>
+      <td><%= product.description %></td>
+      <td><%= product.price %></td>
+      <td><%= product.quantity %></td>
+      <td>
+        <a href="/product/<%= product.id %>">Voir</a>
+        <a href="/product/edit/<%= product.id %>">Editer</a>
+        <form action="/product/<%= product.id %>" method="post">
+          <button type="submit">Supprimer</button>
+        </form>
+      </td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
+
+
+<%- include("_footer") %>
