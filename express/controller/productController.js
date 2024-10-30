@@ -11,6 +11,13 @@ controller.index = (req, res) => {
       res.status(500).json({ error: err.message })
     })
 }
+
+controller.show = (req, res) => {
+  Product.findByPk(req.params.id).then((product) => {
+    res.json(product)
+  })
+}
+
 controller.store = (req, res) => {
 
   Product.create(req.body)

@@ -3,7 +3,10 @@ const app = express()
 const Router = require("./router/productRouter")
 require('dotenv').config()
 const port = process.env.SERVER_PORT || 3000
+const cors = require("cors")
 
+
+app.use(cors())
 app.use(express.json())
 app.listen( port,() => {
   console.log(process)
