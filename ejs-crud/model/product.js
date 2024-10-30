@@ -8,10 +8,10 @@ const productSchema = db.define(
         primaryKey : true, 
         autoIncrement : true 
       },
-    name : { type : sequelize.STRING },
-    description : { type : sequelize.STRING },
-    quantity : { type : sequelize.INTEGER },
-    price : { type : sequelize.INTEGER },
+    name : { type : sequelize.STRING, allowNull : false },
+    description : { type : sequelize.STRING, allowNull : false },
+    quantity : { type : sequelize.INTEGER, allowNull : false },
+    price : { type : sequelize.INTEGER, allowNull : false },
   }
 )
 

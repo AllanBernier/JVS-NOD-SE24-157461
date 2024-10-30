@@ -4,25 +4,8 @@
 
 
 <form action="/product" method="post">
-  <div>
-    <label for="name">Name </label>
-    <input type="text" id="name" name="name">
-  </div>
-
-  <div>
-    <label for="description">Description </label>
-    <input type="text" id="description" name="description">
-  </div>
-
-  <div>
-    <label for="quantity">Quantity </label>
-    <input type="number" id="quantity" name="quantity">
-  </div>
-
-  <div>
-    <label for="price">Price</label>
-    <input type="number" id="price" name="price">
-  </div>
+  
+  <%- include("_form") %>
 
   <input type="submit" value="Créer">
 </form>

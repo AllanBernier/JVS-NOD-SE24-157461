@@ -1,1 +1,27 @@
-Show
+<%- include("_header") %>
+
+<h1>Show Page</h1>
+<a href="/product">Home</a>
+
+
+  <div> 
+    <label for="name">Name </label>
+    <p><%= product.name %></p>
+  </div>
+
+  <div>
+    <label for="description">Description </label>
+    <p><%= product.description %></p>
+  </div>
+
+  <div>
+    <label for="quantity">Quantity </label>
+    <p><%= product.quantity %></p>
+  </div>
+
+  <div>
+    <label for="price">Price</label>
+    <p><%= product.price %></p>
+  </div>
+
+<%- include("_footer") %>
