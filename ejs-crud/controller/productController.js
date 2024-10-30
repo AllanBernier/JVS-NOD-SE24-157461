@@ -26,9 +26,11 @@ controller.create = (req, res) => {
 
 controller.store = (req, res) => {
 
+  console.log(req.body)
+
   Product.create(req.body)
-    .then((product) => {
-      res.status(201).json({ message: "Product created !" , product })
+    .then(() => {
+      res.redirect('/product/show')
     }).catch( (err) => {
       res.status(500).json({ error: err.message })
     })
