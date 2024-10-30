@@ -19,6 +19,13 @@ controller.show = (req, res) => {
 }
 
 controller.store = (req, res) => {
+  const { name, price, description, quantity } = req.body
+  if (name === undefined || price === undefined || description === undefined || quantity === undefined){
+    console.log("Stop")
+    return res.status(403).json({ error: "All fields are required" })
+  }
+
+
 
   Product.create(req.body)
     .then((product) => {
