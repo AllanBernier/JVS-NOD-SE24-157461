@@ -6,11 +6,22 @@ const useWorker = () => {
   worker.on('message', (msg) => {
     console.log(msg)
   })
-  
+
 }
 
-setInterval( () => {
-  console.log("Process working")
-}, 1000 )
+const useWorkerPrime = () => {
+  const worker = new Worker('./workerprime.js')
 
+  worker.on('message', (msg) => {
+    console.log("Prime number found " + msg)
+  })
+}
+
+
+
+setInterval(() => {
+  console.log("Process working")
+}, 1000)
+
+useWorkerPrime()
 useWorker()
